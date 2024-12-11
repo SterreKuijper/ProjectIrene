@@ -10,8 +10,26 @@ def mm_to_inch(value):
 
 
 def celsius_to_kelvin(value):
-    return value + 273
+    return value + Constants.KELVIN_CELSIUS_OFFSET
 
 
 def kelvin_to_celsius(value):
-    return value - 273
+    return value - Constants.KELVIN_CELSIUS_OFFSET
+
+
+def rpm_to_rps(value):
+    return value / 60
+
+
+def rps_to_rpm(value):
+    return value * 60
+
+
+def ms_to_kmh(value):
+    return value * 3.6
+
+
+def kmh_to_ms(value):
+    return value / 3.6
+
+# /60 rmp -> rps

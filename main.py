@@ -3,4 +3,4 @@ from vortex import vortex
 
 model1 = Model1(vortex)
 
-print(model1.get_motor_transmission_gear_ratios())
+print(model1.motorcycle.transmission.active_gear_stage)

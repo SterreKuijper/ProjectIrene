@@ -1,11 +1,16 @@
+from motorcycle.gear_stage import GearStage
 from motorcycle.motorcycle import Motorcycle
 from motorcycle.motor import Motor
 from motorcycle.transmission import Transmission
 from motorcycle.wheel import Wheel
 from motorcycle.battery import Battery
+from utils.constants import Constants
 
 # parts of the motorcycle
-battery = Battery(voltage=126)
+battery = Battery(
+    voltage=126,
+    resistance=0.068
+)
 
 motor = Motor(
     max_rpm=6000,
@@ -30,8 +35,20 @@ front_wheel = Wheel(
 
 wheels = [rear_wheel, front_wheel]
 
+first_gear_stage = GearStage(
+    gear_ratio=2.53,
+)
+
+second_gear_stage = GearStage(
+    gear_ratio=1.59,
+)
+
+gear_stages = [first_gear_stage, second_gear_stage]
+
 transmission = Transmission(
-    gear_ratios=[2.26, 1.66]
+    rear_chain_ratio=2.14,
+    gear_stages= gear_stages,
+    gear_efficiency=Constants.GEAR_EFFICIENCY
 )
 
 vortex = Motorcycle(
