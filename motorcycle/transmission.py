@@ -17,6 +17,6 @@ class Transmission:
             top_speed_kmh = ms_to_kmh(top_speed_ms)
 
             gear_stage.set_top_speed(top_speed_kmh)
-            gear_stage.set_nominal_torque(motor.nominal_torque * gear_stage.gear_ratio.gear_ratio)
+            gear_stage.set_nominal_torque(motor.nominal_torque * gear_stage.gear_ratio)
             gear_stage.set_max_torque(motor.max_torque * gear_stage.gear_ratio)
 

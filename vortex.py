@@ -8,16 +8,16 @@ from utils.constants import Constants
 
 # parts of the motorcycle
 battery = Battery(
-    voltage=126,
-    resistance=0.068
+    voltage=126, # V
+    resistance=0.068 # ohm
 )
 
 motor = Motor(
-    max_rpm=6000,
-    nominal_power=22,
-    nominal_torque=50,
-    max_power=40,
-    max_torque=100,
+    max_rpm=6000, # rpm
+    nominal_power=22, # W
+    nominal_torque=50, # N
+    max_power=40, # W
+    max_torque=100, # N
     efficiency=0.92
 )
 
@@ -28,9 +28,9 @@ rear_wheel = Wheel(
 )
 
 front_wheel = Wheel(
-    width=110,
+    width=110, # mm
     aspect_ratio=0.7,
-    rim_diameter_inch=17
+    rim_diameter_inch=17 # inch
 )
 
 wheels = [rear_wheel, front_wheel]
@@ -56,8 +56,9 @@ vortex = Motorcycle(
     battery=battery,
     motor=motor,
     wheels=wheels,
-    mass=180,
-    frontal_area=0.6,
+    wheelbase=1.38, # m
+    mass=180, #kg
+    frontal_area=0.6, # m^2
     drag_coefficient=0.61,
     lift_coefficient=0.4
 )

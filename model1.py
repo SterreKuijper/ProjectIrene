@@ -6,8 +6,8 @@ class Model1:
         self.motorcycle.calculate_transmission_information()
 
         self.environment = Environment(
-            amb_pressure=960,  # Pa
-            amb_temperature_C=18
+            amb_pressure = 960,  # Pa
+            amb_temperature_C = 18
         )
         self.time_step = 0.01  # s
         self.speed_step = 1  # km/h

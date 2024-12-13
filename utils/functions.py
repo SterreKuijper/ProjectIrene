@@ -31,5 +31,3 @@ def ms_to_kmh(value):
 
 def kmh_to_ms(value):
     return value / 3.6
-
-# /60 rmp -> rps
